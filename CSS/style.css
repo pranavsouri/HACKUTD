@@ -16,13 +16,6 @@ h2{
     text-align: center;
 }
 
-button{
-    margin-top: 10%; 
-    margin-left: 20%;
-    width: 15px;
-    height: 10;
-}
-
 .cupMain {
     position: absolute;
     top: 30%;

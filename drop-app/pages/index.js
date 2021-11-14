@@ -37,7 +37,7 @@ export default function Home() {
             </Button>
             {/*Water Flow Button*/}
             <Button colorScheme="teal" variant="ghost">
-              <Link href="/water-flow" aria-label="Water Flow">Water Flow</Link>
+              <Link href="/NewHomePage" aria-label="Water Flow">Water Flow</Link>
             </Button>
           </HStack>
         </Box>

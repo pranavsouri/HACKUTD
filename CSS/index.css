@@ -1,0 +1,33 @@
+#navbar {
+    height:100px;
+    width:100%;
+    position: fixed;
+    top: 0;
+    border-bottom: 1px;
+    border-bottom-color:black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color:white;
+    text-decoration:none;
+    font-size:larger;
+}
+
+button {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    height:150px;
+    width:300px;
+    background-color:transparent;
+    border: 10px solid white;
+    border-radius:15px;
+    margin:20px;
+}
+
