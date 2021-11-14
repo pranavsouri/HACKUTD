@@ -20,7 +20,6 @@
 // }
 
 function createChart(operations) {
-
     dataVal = []
     for(let i = 0 ; i < operations.length ; i++) {
         dataVal.push({

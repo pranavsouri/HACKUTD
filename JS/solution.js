@@ -7,9 +7,8 @@ function getWaterToGive(rightWater, inFlow) {
 }
 
 function getResponse(data) {
-
   inFlowWater = data.flowRateIn;
-  // console.log(inFlowWater);
+  console.log(inFlowWater);
   operations = getOperations(data);
 
   sol = {}
@@ -44,7 +43,7 @@ function getResponse(data) {
     sol[sinOp.id] = waterToGive;
     inFlowWater = inFlowWater - waterToGive;
   }
-
+  
   // Send water for each one peak
   for (let i = 0; i < onePeakIndices.length && inFlowWater > 0; i++) {
     Op = onePeakOperations[i];
@@ -58,8 +57,12 @@ function getResponse(data) {
     inFlowWater = inFlowWater - waterToGive;
   }
 
+
+  console.log(inFlowWater);
+
   // Send all remaining water in sign
   for (let i = 0; i < sinosidalIndices.length && inFlowWater > 0; i++) {
+    
     sinOp = sinosidalOperations[i];
     SinOpIndexes = sinosidalIndices[i];
 
@@ -82,27 +85,28 @@ function getResponse(data) {
     inFlowWater = inFlowWater - waterToGive;
   }
 
+  console.log(inFlowWater);
+
   // Distribute remaining evenly in signosidal
-  if (sinosidalIndices.length != 0) {
-    waterPerSin = inFlowWater / sinosidalIndices.length;
+  // if (sinosidalIndices.length != 0) {
+  //   waterPerSin = inFlowWater / sinosidalIndices.length;
 
-    for (let i = 0; i < sinosidalIndices.length && inFlowWater > 0; i++) {
-      Op = sinosidalOperations[i];
-      sol[Op.id] = sol[Op.id] + waterPerSin;
-      inFlowWater = inFlowWater - waterPerSin;
-    }
-  }
+  //   for (let i = 0; i < sinosidalIndices.length && inFlowWater > 0; i++) {
+  //     Op = sinosidalOperations[i];
+  //     sol[Op.id] = sol[Op.id] + waterPerSin;
+  //     inFlowWater = inFlowWater - waterPerSin;
+  //   }
+  // }
 
-  // Distribute remaining evenly in one peak ( Only happens if no signosidal)
+  // // Distribute remaining evenly in one peak ( Only happens if no signosidal)
 
-  for (let i = 0; i < onePeakIndices.length && inFlowWater > 0; i++) {
-    Op = onePeakOperations[i];
-    sol[Op.id] = waterPerSin;
-    inFlowWater = inFlowWater - waterPerSin;
-  }
+  // for (let i = 0; i < onePeakIndices.length && inFlowWater > 0; i++) {
+  //   Op = onePeakOperations[i];
+  //   sol[Op.id] = waterPerSin;
+  //   inFlowWater = inFlowWater - waterPerSin;
+  // }
 
   resp = []
-
   for (var obj in sol) {
     resp.push({
       operationId: obj,
