@@ -80,7 +80,7 @@ function addRowToTable(table,id,value) {
     var linkText = document.createTextNode(id);
 
     a.appendChild(linkText);
-    a.href = "http://localhost:8080/operations?id=" +id;
+    a.href = "http://localhost:8080/Operations.html?id=" +id;
     a.title = id;
 
     td.appendChild(a);
