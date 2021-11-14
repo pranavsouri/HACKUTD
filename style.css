@@ -1,0 +1,67 @@
+@charset "utf-8";
+#body {	
+
+    background-color: #262626;
+    font: 15px/25px Helvetica, sans-serif;
+    font-stretch: ultra-expanded;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+h2{
+    padding-top: 40%;
+    text-align: center;
+}
+
+.cupMain {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 180px;
+    border: 6px solid #262626;
+    border-top: 2px solid transparent;
+    border-radius: 15px;
+    background: url(https://image.ibb.co/fmHm66/wave.png);
+    background-position: 0px 350px;
+    background-repeat: repeat-x;
+    animation: wave-animation 10s ease-in-out infinite;
+    box-shadow: 0 0 0 6px #fff, 0 20px 35px rgba(0,0,0,1);
+  }
+  
+  @keyframes wave-animation{
+    0%{background-position:300px 0px;};
+    100%{background-position:200px 350px;};
+  }
+
+  /*@keyframes filling {
+    50% {background-position: 3000px 0px;}
+    100% {background-position: 6000px 350px;}
+  }*/
+
+  .cup {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 80px;
+    border: 6px solid #262626;
+    border-top: 2px solid transparent;
+    border-radius: 15px;
+    background: url(https://image.ibb.co/fmHm66/wave.png);
+    background-position: 0px 350px;
+    background-repeat: repeat-x;
+    animation: filling 10s ease-in-out infinite;
+    box-shadow: 0 0 0 6px #fff, 0 20px 35px rgba(0,0,0,1);
+  }
+  
+  @keyframes filling {
+    50% {background-position: 3000px 0px;}
+    100% {background-position: 6000px 350px;}
+  }
