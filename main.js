@@ -1,49 +1,52 @@
 
+var xVal = 0;
+var yVal = 100;
+var updateInterval = 1000;
+var dataLength = 20;
+var chart;
 
 function updateChart() {
-    count = count || 1;
+    count = 100;
 
     // For data inputs
-    for (var j = 0; j < count; j++) {
-        yVal = yVal + Math.round(5 + Math.random() * (-5 - 5));
-        dps.push({
-            x: xVal,
-            y: yVal
-        });
-        xVal++;
-    }
 
-    if (dps.length > dataLength) {
-        dps.shift();
-    }
-
-    chart.render();
 }
 
-var dps = []; // dataPoints
+var dps = [];
 
-window.onload = function () {
-    var chart = new CanvasJS.Chart("chartContainer", {
-        title: {
-            text: "Dynamic Data"
-        },
-        data: [{
+// window.onload = function () {
+//     operations = getOperations(dummyData)
+//     dps = getWaterProfitFromOperations(operations[0])
+
+//     dataVal = []
+//     for(let i = 0 ; i < operations.length ; i++) {
+//         dataVal.push({
+//             type: "line",
+//             dataPoints: getWaterProfitFromOperations(operations[i]),
+//         })
+//     }
+
+//     var chart = new CanvasJS.Chart("container",
+//     {
+//         data: dataVal
+//     });
+//     chart.render();  
+// }
+
+function createChart(operations) {
+
+    dataVal = []
+    for(let i = 0 ; i < operations.length ; i++) {
+        dataVal.push({
             type: "line",
-            dataPoints: dps
-        }]
+            dataPoints: getWaterProfitFromOperations(operations[i]),
+        })
+    }
+    var chart = new CanvasJS.Chart("container",
+    {
+        data: dataVal
     });
-
-    var xVal = 0;
-    var yVal = 100;
-    var dataLength = 20; // number of dataPoints visible at any point
-
-    var updateChart = function (count) {
-
-    };
-
-    updateChart(dataLength);
-    setInterval(function () { updateChart() }, updateInterval);
+    chart.render(); 
 }
 
-function 
 
