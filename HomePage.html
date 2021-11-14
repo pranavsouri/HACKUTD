@@ -1,13 +1,26 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<link rel="stylesheet" href="style.css">
-<script src="createDynamicBuckets.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="createDynamicBuckets.js"></script>
 </head>
+
 <body id="body">
-<div class="cupMain"><h2>60%</h2></div>
-<div id="cup"></div>
-<button onclick="createBuckets()"></button>>
-<!--<div class="cup"><h2>80%</h2></div>-->
+    <div class="cupMain">
+        <h2>60%</h2>
+    </div>
+
+    <template id="cupTemplate">
+        <div id="cup">
+            <h2>60%</h2>
+        </div>
+    </template>
+    <div id="operations">
+
+    </div>
+    <button onclick="createBuckets(20,1,10)"></button>>
+    <!--<div class="cup"><h2>80%</h2></div>-->
 </body>
+
 </html>
