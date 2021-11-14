@@ -17,8 +17,10 @@ socket.addEventListener('message', function (event) {
             console.log(data);
         } else {
             operations = getOperations(data);
-            createChart(operations);
+            // createChart(operations);
             resp = getResponse(data);
+
+            updateChart(resp);
             resp = JSON.stringify(resp);
 
             console.log(resp);
