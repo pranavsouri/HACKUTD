@@ -6,11 +6,15 @@
     <link rel="stylesheet" href="CSS/styleTable.css">
     <script src="JS/solution.js"></script>
     <script src="JS/createTable.js"></script>
+    <script src="JS/createDynamicBuckets.js"></script>
 </head>
 
 <body id="body">
-    
-    <div id="inFlow">
+
+    <div class="cupMain">
+    </div>
+
+    <div id="inFlow" style="margin-top: 25%;">
         <h2>Input Flow ##</h2>
     </div>
 
@@ -20,14 +24,6 @@
 
     <center>
     <table id="dataTable">
-        <!--<tr>
-            <th>Operation ID</th>
-            <th>Water Up</th>
-        </tr>
-        <tr>
-            <td id="opId"></td>
-            <td id="waterUp"></td>
-        </tr>-->
         <h1>&nbsp;&nbsp;Operations</h1>
         <tr>
             <th style="width: 300;">&nbsp;</th>
@@ -36,13 +32,8 @@
             <th style="width: 300;">Water In</th>
         </tr>
     </table>
-    
-
-    
-
+ 
     <div id="myDynamicTable" onload="Javascript:addTable()">
-        <!--<input type="button" id="create" value="Click here" onclick="Javascript:addTable()">
-        To create a Table-->
     </div>
     </center>
     <!--<div class="cup"><h2>80%</h2></div>-->
