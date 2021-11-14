@@ -44,7 +44,7 @@ h2{
     100% {background-position: 6000px 350px;}
   }*/
 
-  .cup {
+  #cup {
     position: absolute;
     top: 80%;
     left: 50%;
@@ -55,7 +55,7 @@ h2{
     border-top: 2px solid transparent;
     border-radius: 15px;
     background: url(https://image.ibb.co/fmHm66/wave.png);
-    background-position: 0px 350px;
+    /*background-position: 0px 350px;*/
     background-repeat: repeat-x;
     animation: filling 10s ease-in-out infinite;
     box-shadow: 0 0 0 6px #fff, 0 20px 35px rgba(0,0,0,1);
