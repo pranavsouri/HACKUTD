@@ -19,6 +19,11 @@ socket.addEventListener('message', function (event) {
             revLastFiveH2 = document.getElementById("revLastFiveH2");
             revLastFiveH2.textContent = "Revenue in last 5 seconds: " + data.incrementalRevenue.toFixed(2);
 
+            revPerDayH2 = document.getElementById("revenuePerDayH2");
+            revPerDayH2.textContent = "Revenue Day: " + data.revenuePerDay.toFixed(2);
+
+            
+
         } else {
 
             operations = getOperations(data);
@@ -29,9 +34,11 @@ socket.addEventListener('message', function (event) {
             // resp = JSON.stringify(resp);
             
             resp = stupidResponse(data)
+
+            addOperations(resp);
+
             resp = JSON.stringify(resp);
 
-            for(let i = 0 ; i < operations.len)
             
             inFlowH2 = document.getElementById("inFlowH2");
             inFlowH2.textContent = "Input Flow: " + data.flowRateIn.toFixed(2);

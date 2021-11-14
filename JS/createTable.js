@@ -25,7 +25,13 @@ function addTable(operations) {
 
         var td = document.createElement('TD');
         td.width='300';
-        td.appendChild(document.createTextNode(operations[i].id));
+        var a = document.createElement('a');
+        var linkText = document.createTextNode(operations[i]);
+
+        a.appendChild(linkText);
+        a.href = "http://example.com";
+        td.appendChild(a);
+
         tr.appendChild(td);
 
 
@@ -43,6 +49,55 @@ function addTable(operations) {
     }
     myTableDiv.appendChild(table);
     
+}
+
+function addOperations(resp) {
+
+    table = document.getElementById("dataTable");
+
+    while (table.firstChild) {
+        table.removeChild(table.firstChild);
+    }
+
+    table = document.getElementById("dataTable");
+
+    for(let i = 0 ; i < resp.length ; i++) {
+        addRowToTable(table,resp[i].operationId,resp[i].flowRate);
+    }
+
+
+}
+
+function addRowToTable(table,id,value) {
+
+    var tr = document.createElement('TR');
+    table.appendChild(tr);
+    
+
+    var td = document.createElement('TD');
+    td.width='300';
+    var a = document.createElement('a');
+    var linkText = document.createTextNode(id);
+
+    a.appendChild(linkText);
+    a.href = "http://localhost:8080/operations?id=" +id;
+    a.title = id;
+
+    td.appendChild(a);
+
+    tr.appendChild(td);
+    td.appendChild(a);
+    tr.appendChild(td);
+
+
+    var td = document.createElement('TD');
+    td.width='200';
+    tr.appendChild(td);
+
+    var td = document.createElement('TD');
+    td.width='300';
+    td.appendChild(document.createTextNode(value));
+    tr.appendChild(td);
 }
  
 function load() {

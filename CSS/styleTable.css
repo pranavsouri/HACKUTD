@@ -9,11 +9,11 @@
 table{
     margin-left: auto;
     margin-right: auto;
-    font-size: smaller;
+    font-size: 20px;
     border: 3px solid #f5eded;
-    border-radius: 15px;
-    margin: 50px;
-    padding: 50px;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
 }
 
 td{
