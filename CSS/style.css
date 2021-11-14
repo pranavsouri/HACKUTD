@@ -36,7 +36,7 @@ button{
     background: url(https://image.ibb.co/fmHm66/wave.png);
     background-position: 0px 350px;
     background-repeat: repeat-x;
-    animation: wave-animation 10s ease-in-out infinite;
+    animation: wave-animation 5s ease-in-out infinite;
     box-shadow: 0 0 0 6px #fff, 0 20px 35px rgba(0,0,0,1);
 }
 
@@ -44,11 +44,6 @@ button{
     0%{background-position:300px 0px;};
     100%{background-position:200px 350px;};
 }
-
-  /*@keyframes filling {
-    50% {background-position: 3000px 0px;}
-    100% {background-position: 6000px 350px;}
-  }*/
 
 #cupTemplate{
     position: absolute;
