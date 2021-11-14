@@ -28,8 +28,8 @@ socket.addEventListener('error', function(error) {
     console.log('Connect Error: ' + error.toString());
 });
 
-/*  */
-function adInFlow(){
+/* Attemping to add inFlow Numbers */
+function addInFlow(){
     var inFlow = document.getElementById("inFlow");
     var outPutFlow = document.createElement('H2');
     outPutFlow.appendChild(document.createTextNode(operations.flowRateIn));
