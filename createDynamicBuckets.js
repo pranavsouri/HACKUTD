@@ -1,22 +1,23 @@
 
-xPos = 10;
+xPos = 100;
+yPos = 200;
+margin = 100;
 
-function createBuckets(xPos, operationId, waterFlow) {
-    console.log("adas");
+function createBuckets(operationId, waterFlow) {
     var cupList = document.getElementById('operations');
-
-    var temp, item, a, i;
+    var temp, item, temp2, opID, a, i;
     temp = document.getElementById("cupTemplate");
-    item = temp.content.querySelector("div");
+    item = temp.content.querySelector("td");
+
+    item.style.width = '200';
+    item.style.transform = "transform(" + xPos.toString + "% , " + yPos.toString + "%)";
 
     a = document.importNode(item, true);
-
-    // a.style.position = "0px " + xPos.toString() + "px";
     
-    a.style.left = xPos.toString + "%";
-   
-    console.log(a.style.position);
     cupList.appendChild(a);
-    xPos = xPos + 20;
+    //console.log(cupList);
+    //console.log(xPos);
+    //console.log(yPos);
+    xPos = xPos + 100;
 }
 
