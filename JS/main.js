@@ -1,18 +1,4 @@
 
-var xVal = 0;
-var yVal = 100;
-var updateInterval = 1000;
-var dataLength = 20;
-var chart;
-
-function updateChart() {
-    count = 100;
-
-    // For data inputs
-
-}
-
-var dps = [];
 
 // window.onload = function () {
 //     operations = getOperations(dummyData)
