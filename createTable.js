@@ -59,7 +59,7 @@ function addTable(operations) {
 
 
         var td = document.createElement('TD');
-        td.width='100';
+        td.width='150';
         tr.appendChild(td);
 
         var td = document.createElement('TD');
